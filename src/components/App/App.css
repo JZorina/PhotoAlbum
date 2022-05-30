@@ -1,0 +1,23 @@
+.App {
+  text-align: left;
+  display: flex;
+  flex: 1;
+  color: aliceblue;
+  padding: 20px;
+  flex-direction: column;
+}
+
+
+.featuresContainer{
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+.list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1px;
+  flex-wrap: wrap;
+  width: 100%;
+}

@@ -1,0 +1,21 @@
+.searchBar{
+    background:transparent;
+    border: 1px solid #6fade6;
+    border-radius:2px;
+    width:200px;
+    height:30px;
+    color:#6fade6;
+    font-size:13px;
+    margin-left:50px;
+}
+
+.searchBar::placeholder{
+    color:yellowgreen;
+    opacity:0.7;
+    font-size:12px;
+    text-align: center;
+}
+.searchBar:hover{
+    background:rgb(72, 140, 175);
+    color:white;
+}

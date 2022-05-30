@@ -1,0 +1,22 @@
+select{
+    width: 70px;
+    height: 30px;
+    border: 2.5px solid yellow;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    background:transparent;
+    border-radius:3px;
+    color:#A7C7E4;
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+select:focus {
+    outline:none;
+  }
+  select:hover{
+    background:#355979;
+    color:white;
+}
