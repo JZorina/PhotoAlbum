@@ -6,7 +6,6 @@ import DropDown from "../DropDown/DropDown";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 import { initialPhoto, PHOTOS_URL, Texts } from "../../Utils/Consts";
 import Modal from "../Modal/Modal";
-import { bool } from "prop-types";
 
 const PhotoList = lazy(() => import("../PhotoList/PhotoList"));
 
