@@ -4,8 +4,9 @@ import { Photo } from "../../Interfaces/Photo";
 import SearchBar from "../SearchBar/SearchBar";
 import DropDown from "../DropDown/DropDown";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
-import { initialPhoto, PHOTOS_URL, Texts } from "../../Utils/Consts";
+import { initialPhoto, PHOTOS_URL } from "../../Utils/Consts";
 import Modal from "../Modal/Modal";
+import { en } from "../../Utils/Dictionary";
 
 const PhotoList = lazy(() => import("../PhotoList/PhotoList"));
 
@@ -51,10 +52,10 @@ function App() {
               photo={selectedPhoto}
             />
           ) : null}
-          <h3>{Texts.mainTitle}</h3>
+          <h4 className="mainTitle">{en.mainTitle}</h4>
           <div className="featuresContainer">
-            <DropDown data={photos} handleChange={setFilteredPhotos} />
             <SearchBar data={photos} onSearchTerm={setFilteredPhotos} />
+            <DropDown data={photos} handleChange={setFilteredPhotos} />
           </div>
           <Suspense fallback={<LoadingSpinner />}>
             <PhotoList

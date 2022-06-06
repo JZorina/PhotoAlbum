@@ -1,6 +1,7 @@
 import React from "react";
 import PhotoItem from "../PhotoItem/PhotoItem";
 import { Photo } from "../../Interfaces/Photo";
+import './PhotoList.css'
 interface Props {
   allPhotos: Photo[];
   handlePhotoClick: (item: Photo) => void;

@@ -1,22 +1,23 @@
 select{
-    width: 70px;
-    height: 30px;
-    border: 2.5px solid yellow;
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    align-items:center;
+    width: 90px;
+    height:25px;
+    border: 1.8px solid rgb(94,130,154);
     background:transparent;
-    border-radius:3px;
+    border-radius:4px;
     color:#A7C7E4;
-    font-size: 17px;
-    margin-left: 10px;
+    font-size: 12px;
+    margin-left: 15px;
+    font-size:11px;
+    font-weight: 500;
+    -webkit-appearance: none;
+    text-align: center;
 }
 
 select:focus {
     outline:none;
-  }
-  select:hover{
-    background:#355979;
-    color:white;
+}
+
+select:hover{
+  border-color:rgb(72, 140, 175);
+  background-color:rgb(72, 140, 175) ;
 }

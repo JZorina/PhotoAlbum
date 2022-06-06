@@ -2,22 +2,19 @@
   text-align: left;
   display: flex;
   flex: 1;
-  color: aliceblue;
+  color: rgb(156,176,195);
   padding: 20px;
   flex-direction: column;
 }
-
-
+.mainTitle{
+  font-size: 30px;
+  font-weight: 300;
+  margin-left: 10px;
+}
 .featuresContainer{
   display: flex;
-  flex: 1;
   flex-direction: row;
-}
-.list{
-  display: flex;
-  justify-content: space-between;
+  height: 30px;
+  margin: 5px 0;
   align-items: center;
-  gap: 1px;
-  flex-wrap: wrap;
-  width: 100%;
 }

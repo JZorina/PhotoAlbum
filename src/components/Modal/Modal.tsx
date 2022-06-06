@@ -1,6 +1,7 @@
 import React from "react";
 import { Photo } from "../../Interfaces/Photo";
-import { Texts } from "../../Utils/Consts";
+import { en } from "../../Utils/Dictionary";
+import  images  from "../../Utils/Images";
 import "./Modal.css";
 
 interface Props {
@@ -16,7 +17,7 @@ const Modal: React.FC<Props> = ({ show, handleClose, photo }) => {
       <section className="modal-main">
         <button type="button" onClick={handleClose}>
           <img
-            src={require("../../Assets/closeIcon.gif")}
+            src={images.closeIcon}
             alt="Close the window"
             className="closeIcon"
           />
@@ -29,10 +30,10 @@ const Modal: React.FC<Props> = ({ show, handleClose, photo }) => {
             alt={photo.title}
           />
           <p>
-            {Texts.modal.albunPrefix} {photo.albumId}
+            {en.prefixes.album} {photo.albumId}
           </p>
           <p>
-            {Texts.modal.idPrefix} {photo.id}
+            {en.prefixes.id} {photo.id}
           </p>
         </div>
       </section>

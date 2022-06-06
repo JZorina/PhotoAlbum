@@ -1,5 +1,6 @@
 import React from 'react';
 import { Photo } from '../../Interfaces/Photo';
+import { en } from '../../Utils/Dictionary';
 import './SearchBar.css'
 interface Props{
     data:Photo[];
@@ -15,7 +16,7 @@ const SearchBar:React.FC<Props> = ({onSearchTerm,data})=>{
             <input 
                 className='searchBar'
                 type="text" 
-                placeholder='Search Photo'
+                placeholder={en.placeHolders.searchBar}
                 onChange={onSubmit}
             />
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Photo } from '../../Interfaces/Photo';
+import { en } from '../../Utils/Dictionary';
 import './DropDown.css';
 interface Props{
     data:Photo[];
@@ -11,7 +12,11 @@ const DropDown:React.FC<Props> = ({data,handleChange})=>{
         //since we want to display the only the item in a specific album, 
         //the filter method will return a new list with the relevant items,
         //so the state in the parent component could be updated with the correct items
-        handleChange(data.filter(i=>i.albumId === Number(e.target.value)))
+        //if the user selects the placeholder item, the items associated with albumId 1 
+        //will be displayed
+        const input = Number(e.target.value)
+        if(!isNaN(input)) handleChange(data.filter(i=>i.albumId === input))
+        else handleChange(data.filter(i=>i.albumId === 1))
     }
     const renderOptions =()=> {
         //since we get all the photos, we extract only the distinct values of the albumIds
@@ -30,7 +35,8 @@ const DropDown:React.FC<Props> = ({data,handleChange})=>{
     }
 
     return(
-        <select className='select' onChange={filter}>
+        <select className='select' onChange={filter} defaultValue={0}>
+            <option>{en.placeHolders.dropDown}</option>
             {renderOptions()}
         </select>
     )

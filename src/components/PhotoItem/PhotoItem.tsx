@@ -1,5 +1,6 @@
 import React from "react";
 import { Photo } from "../../Interfaces/Photo";
+import { en } from "../../Utils/Dictionary";
 import "./PhotoItem.css";
 interface Props {
   photo: Photo;
@@ -24,7 +25,7 @@ const PhotoItem: React.FC<Props> = ({ photo, handleClick, handleModal }) => {
       <div className="titleContainer">
         <div className="texts">
           <span className="title">{photo.title}</span>
-          <span className="id">id: {photo.id}</span>
+          <span className="id">{en.prefixes.id} {photo.id}</span>
         </div>
         <div className="bottomContainer">
           <p className="url">{photo.url}</p>
